@@ -1,0 +1,44 @@
+﻿---------------------------------------------------------------
+--DOCKER
+---------------------------------------------------------------
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Liki@Soluhisho" -p 1433:1433 --name sql1 -h sql1 -d mcr.microsoft.com/mssql/server:2019-latest
+docker build -t leakeymaina/mtrapi .
+docker run -p 8080:80 leakeymaina/mtrapi -- http://localhost:8080/api/
+docker push leakeymaina/mtrapi
+
+
+---------------------------------------------------------------
+--ENTITY FRAMEWORK
+---------------------------------------------------------------
+dotnet tool install --global dotnet-ef
+dotnet tool update --global dotnet-ef
+
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+dotnet ef migrations -v add InitialMigration
+dotnet ef database update
+
+
+---------------------------------------------------------------
+--AZURE
+---------------------------------------------------------------
+--Create Resource Group
+az group create --name MTRAPIResourceGroup --location uksouth
+
+--Create Azure Container Register
+az acr create --resource-group MTRAPIResourceGroup --name MTRAPIContainerRegister --sku Basic
+
+--Log in to container registry
+az acr login --name MTRAPIContainerRegister
+
+Server=tcp:mtrdb.database.windows.net,1433;
+Initial Catalog=mtrdb;
+Persist Security Info=False;
+User ID=Admin@Soluhisho@mtrdb;
+Password={your_password};
+MultipleActiveResultSets=False;
+Encrypt=True;
+TrustServerCertificate=False;
+Connection Timeout=30;

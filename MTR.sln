@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTRAPI", "MTRAPI\MTRAPI.csproj", "{87CDDAEB-AE52-472A-AA66-DA17AE432A9D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2F861B53-C78C-4ED3-A941-842D3190A2CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTRAPITests", "MTRAPITests\MTRAPITests.csproj", "{5CAEB6F7-5B31-4909-A7AD-84AC7CB9314E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87CDDAEB-AE52-472A-AA66-DA17AE432A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87CDDAEB-AE52-472A-AA66-DA17AE432A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87CDDAEB-AE52-472A-AA66-DA17AE432A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87CDDAEB-AE52-472A-AA66-DA17AE432A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F861B53-C78C-4ED3-A941-842D3190A2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F861B53-C78C-4ED3-A941-842D3190A2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F861B53-C78C-4ED3-A941-842D3190A2CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F861B53-C78C-4ED3-A941-842D3190A2CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CAEB6F7-5B31-4909-A7AD-84AC7CB9314E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CAEB6F7-5B31-4909-A7AD-84AC7CB9314E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CAEB6F7-5B31-4909-A7AD-84AC7CB9314E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CAEB6F7-5B31-4909-A7AD-84AC7CB9314E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97CC9E69-DAE2-45C1-8570-84C13B77AD37}
+	EndGlobalSection
+EndGlobal
